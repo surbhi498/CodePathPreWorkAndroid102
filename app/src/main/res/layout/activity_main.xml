@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/purple_200"
     tools:context=".MainActivity">
 
     <androidx.cardview.widget.CardView
@@ -11,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_margin="25dp"
-        android:background="@color/card_foreground"
+        android:background="@color/teal_200"
         app:cardCornerRadius="25dp"
         android:elevation="20dp">
 
@@ -23,11 +24,14 @@
                 android:id="@+id/profile_image"
                 android:layout_width="@dimen/profile_image_size"
                 android:layout_height="@dimen/profile_image_size"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
                 android:layout_marginTop="60dp"
-                android:src="@drawable/avatar_9"/>
+                android:contentDescription="@string/surbhi"
+                android:src="@drawable/surbhi"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ImageContrastCheck"
+                tools:srcCompat="@drawable/avatar_6" />
 
             <TextView
                 android:id="@+id/profile_name"
@@ -39,7 +43,7 @@
                 android:layout_marginTop="50dp"
                 tools:text="First Last"
                 android:textSize="24sp"
-                android:textColor="@color/black"
+                android:textColor="@color/green"
                 android:textStyle="bold"
                 android:textAllCaps="true"/>
 

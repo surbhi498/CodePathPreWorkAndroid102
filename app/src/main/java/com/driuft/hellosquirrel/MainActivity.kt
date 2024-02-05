@@ -2,10 +2,14 @@ package com.driuft.hellosquirrel
 
 import android.os.Build
 import android.os.Bundle
+import android.util.Log
 import android.view.WindowInsets
 import android.view.WindowManager
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
+import android.widget.Toast
+import android.widget.Toast.LENGTH_SHORT
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.content.res.AppCompatResources
 
@@ -18,31 +22,16 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        val button = findViewById<Button>(R.id.button)
+        button.setOnClickListener { Log.v("hello world" , "Button Clicked!")
+            Toast.makeText(this, "Hello To You", LENGTH_SHORT).show()
+        }
 
-        configureViews()
-        setupProfile()
+
+
     }
 
-    private fun configureViews() {
-        profileImage = findViewById(R.id.profile_image)
-        profileName = findViewById(R.id.profile_name)
-        profileBio = findViewById(R.id.profile_bio)
-    }
 
-    private fun setupProfile() {
-        configureImage()
-        configureName()
-    }
 
-    private fun configureImage() {
-        profileImage.setImageDrawable(AppCompatResources.getDrawable(this, R.drawable.surbhi))
-    }
 
-    private fun configureName() {
-        profileName.text = getString(
-            R.string.full_name,
-            getString(R.string.first_name),
-            getString(R.string.last_name)
-        )
-    }
 }

@@ -46,7 +46,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/profile_image"
                 android:gravity="center_horizontal"
-                tools:text="@string/profile_bio_text" />
+                android:text="@string/profile_bio_text" />
 
             <Button
                 android:id="@+id/button"
